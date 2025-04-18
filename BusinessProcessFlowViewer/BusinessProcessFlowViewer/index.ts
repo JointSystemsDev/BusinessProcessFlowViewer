@@ -206,8 +206,13 @@ export class BusinessProcessFlowViewer implements ComponentFramework.StandardCon
 
 				//Define a variable to know which step is active for this record and this BPF.
 				let activeStageFound: boolean = false;
-				//Parse all stage id and create cells with name and find the one active.
-				for (var i = 0; i < stagesData.stage.id.length; i++) {
+				
+				
+				let indices = Array.from({ length: stageData.name.length }, (_, i) => i) // Create an array of indices and sort them by stage names
+					.sort((a, b) => stageData.name[a].localeCompare(stageData.name[b]));
+				
+				// Use the sorted indices to loop through the stages in sorted order
+				indices.forEach(i => {
 					let progresStageDiv: HTMLDivElement = document.createElement("div");
 					progresStageDiv.classList.add("progress-step");
 					progresStageDiv.classList.add("progress-step" + this._viewId);
@@ -231,7 +236,7 @@ export class BusinessProcessFlowViewer implements ComponentFramework.StandardCon
 					progresStageDiv.innerText = stageData.name[i];
 					//We add the element to the Div. 
 					progresDiv.appendChild(progresStageDiv);
-				}
+				});
 				divContainer.appendChild(progresDiv);
 				//Add the element to the array.
 				let elementToAdd: (number | HTMLDivElement)[] = [order, divContainer]

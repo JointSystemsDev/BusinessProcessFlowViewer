@@ -15,7 +15,7 @@
     <property name="notActiveColor" display-name-key="notActiveColor" description-key="This Hex Color define the background color of the not active stages." of-type="SingleLine.Text" usage="input" required="true" default-value="#DFE3E4" />
     <property name="notActiveTextColor" display-name-key="notActiveTextColor" description-key="This Hex Color define the text color of the not active stages." of-type="SingleLine.Text" usage="input" required="true" default-value="#666666" />
     <property name="progressTrackLineColor" display-name-key="progressTrackLineColor" description-key="This Hex Color define the background color of the progress line." of-type="SingleLine.Text" usage="input" required="true" default-value="#DFE3E4" />
-    <property name="pulseColor" display-name-key="pulseColor" description-key="This Hex Color define the pulse color. If empty pulse is not enabled." of-type="SingleLine.Text" usage="input" required="false" default-value="#95c6e6" />
+    <property name="pulseColor" display-name-key="pulseColor" description-key="This Hex Color define the pulse color. If empty pulse is not enabled." of-type="SingleLine.Text" usage="input" required="false" />
     <property name="displayEntityName" display-name-key="displayEntityName" description-key="This value is used to display or not the name of the entity." of-type="Enum" usage="input" required="true" default-value="0">
       <value name="Yes" display-name-key="Yes">0</value>
       <value name="No" display-name-key="No">1</value>
